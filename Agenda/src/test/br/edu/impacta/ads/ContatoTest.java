@@ -24,4 +24,12 @@ public class ContatoTest {
 		cdao.inserir(contato);
 		assertTrue("O contato não foi adicionado.", cdao.existe(contato));
 	}
+	
+	@Test
+	public void testaSeContatoExiste() {
+		ContatoDaoArquivo cdao = new ContatoDaoArquivo("contatos.txt");
+		Contato daniel = new Contato("Daniel","1234567");
+		cdao.inserir(daniel);
+		assertTrue("Existe o contato Daniel", cdao.existe(daniel));
+	}
 }

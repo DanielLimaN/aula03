@@ -21,4 +21,6 @@ public class GenericTest {
 		List <Contato> lista = cdao.lerTodos();
 		assertNotNull("Não existe um arquivo de dados.", lista);
 	}
+	
+	
 }
